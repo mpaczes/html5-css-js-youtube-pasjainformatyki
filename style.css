@@ -30,7 +30,7 @@ body {
 	text-align: center;
 	border-top: 1px solid #751b1b;
 	border-bottom: 1px solid #751b1b;
-	height: 40px;
+	/* height: 40px; */
 }
 
 .content
@@ -116,4 +116,67 @@ body {
 	left: 0;
 	top: 0;
 	z-index: 100;
+}
+
+ol {
+	/* padding i margin zerowe zawsze moga sie przydac podczas stylizowania list */
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 18px;
+	height: 35px;			/* wysokosc calego menu */
+	line-height: 200%; /* jak wiele miejsca w pionie zajmuje jedna linia tekstu; napisy nie beda przyklejone do gornej krawedzi */
+	display: inline-block;			/* uklada elementy blokowe w linii */
+}
+
+ol a {
+	color: #ffffff;			/* bialy */
+	text-decoration: none;				/* usuniecie podkreslenia z linku */
+	display: block; 			/* czyli link zachowuje sie jak element blokowy, czyli mozna takiemu elemnotwi przypisac szerokosc i wysokosc */
+}
+
+ol > li {				/* rodzic > potomek */
+	float: left;
+	width: 150px;
+	height: 40px;
+	border-right: 1px dashed #751b1b;
+}
+
+ol > li:first-child {
+	border-left: 1px dashed #751b1b;
+}
+
+ol > li:hover {
+	background-color: #cf6969;
+}
+
+ol > li:hover > a {
+	color: #451717;
+}
+
+ol > li > ul {
+	list-style-type: none;
+	padding: 0;
+	marging: 0;
+	height: 40px;
+	display: none;
+}
+
+ol > li:hover > ul {
+	display: block;
+}
+
+ol > li > ul > li {
+	background-color: #cf6969;
+	position: relative;			/* dzieki temu elementy listy zaslonia tekst na tronie w divie 'content'; czyli element listy ustawi sie relatywnie do elementu ul */
+	z-index: 100;		/* rozwijane menu zasloni wszystko, czyli nie tylko tekst, ale tez obrazki i inne divy */
+	border-top: 1px dashed #751b1b;
+}
+
+ol > li > ul > li:hover {
+	background-color: #c34f4f;
+}
+
+ol > li > ul > li:hover  > a {
+	color: #451717;
 }
