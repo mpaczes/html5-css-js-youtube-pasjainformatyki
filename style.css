@@ -1,4 +1,23 @@
 body {
-	background-color : #303030;			// ciemno szary
-	color: #ffffff;									// bialy
+    background-color: #303030;
+    color: #ffffff;
+	font-family: 'Lato', sans-serif;
+	fonts-size: 20px;
+}
+
+.wrapper {
+	width: 100%;
+}
+
+.header {
+	width: 100%;					// niekoniecznie  potrzebne
+	padding: 40px 0;			// wypelnienie wewnetrzne (padding w pionie i poziomie)
+}
+
+.logo {
+	width: 450px;
+	font-size: 48px;
+	// border: 1px solid #ffffff;
+	margin-left: auto;
+	margin-right: auto;
 }
