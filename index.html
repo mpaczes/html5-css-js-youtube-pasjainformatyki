@@ -66,5 +66,28 @@
 			</div>
 		</div>
 		
+		<script src="jquery-1.11.3.min.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var NavY = $('.nav').offset().top;
+				
+				var stickyNav = function() {
+					var ScrollY = $(window).scrollTop();
+					
+					if (ScrollY > NavY) {
+						$('.nav').addClass('sticky');			// przyklej menu
+					} else {
+						$('.nav').removeClass('sticky');		// odklej menu
+					}
+				};
+				
+				stickyNav();				// wywolanie 1 kiedy zajdzie document.ready()
+				
+				$(window).scroll(function() {
+					stickyNav();			// wywolanie 2 kiedy zajdzie scroll okna
+				});
+			});
+		</script>
 	</body>
 </html>
