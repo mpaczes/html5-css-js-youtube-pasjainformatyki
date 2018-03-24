@@ -1,8 +1,9 @@
 body {
     background-color: #303030;
     color: #ffffff;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Lato', sans-serif;			/* font z google fonts */
 	fonts-size: 20px;
+	margin: 0 !important;
 }
 
 .wrapper {
@@ -10,14 +11,24 @@ body {
 }
 
 .header {
-	width: 100%;					// niekoniecznie  potrzebne
-	padding: 40px 0;			// wypelnienie wewnetrzne (padding w pionie i poziomie)
+	width: 100%;				/* niekoniecznie  potrzebne */
+	padding: 40px 0;			/* wypelnienie wewnetrzne (padding w pionie i poziomie) */
 }
 
 .logo {
 	width: 450px;
 	font-size: 48px;
-	// border: 1px solid #ffffff;
+	/* border: 1px solid #ffffff; */
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.nav {
+	width: 100%;
+	padding: 10px 0;					/* wypelnienie wewnetrzne (padding w pionie i poziomie) */
+	background-color: #c34f4f;
+	text-align: center;
+	border-top: 1px solid #751b1b;
+	border-bottom: 1px solid #751b1b;
+	height: 40px;
 }
