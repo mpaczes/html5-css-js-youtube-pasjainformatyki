@@ -11,4 +11,36 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 100px;
+	/* ponizej jest kod wygenerowany na stronie https://www.cssmatic.com/box-shadow */
+	-webkit-box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);		/* -webkit to open sourcowy silnik renderowania stron internetowych ktorego uzyto m. in. w Chrome, Safari i Operze */
+	-moz-box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);			/* przedrostek -moz oznacza Mozille Firefoxa */
+	box-shadow: 3px 3px 30px 5px rgba(204,204,204,0.9);
+}
+
+input[type=text],
+input[type=password] {
+	width: 300px;
+	background-color: #efefef;		/* bardzo jasny ale nie bialy */
+	color: #666666;				/* mozna ten zapis skrocic do #666; */
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	font-size: 20px;			/* pola input nie dziedzicza rozmiaru fonta po elemencie body; stad czcionka elemntow interfejsu jest poza kaskada; dlatego tzreba to tutaj ustawic */
+	padding: 10px;
+	/* mamy inna szerkosc dla pol tekstowych i przyciskow,  bo : */
+	/* dla pol tekstowych przegladarka ustawia box-sizing: content-box; , czyli do maksymalnej szerokosci pol dolozona 10px paddingu */
+	/* przycisk uzywa innego sposobu liczenia rozmiaru, tzn. box-sizing: border-box; . */
+	box-sizing: border-box;			/* nakazuje ustawic 300px niezaleznie od szerokosci kontentu */
+}
+
+input[type=submit] {
+	width: 300px;
+	background-color: #36b03c;
+	font-size: 20px;
+	color: white;
+	padding: 15px 10px; 				/* y x */
+	margin-top: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
 }
