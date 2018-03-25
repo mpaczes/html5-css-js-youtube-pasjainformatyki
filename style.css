@@ -32,6 +32,7 @@ input[type=password] {
 	box-sizing: border-box;			/* nakazuje ustawic 300px niezaleznie od szerokosci kontentu */
 	/* outline to inaczej obwodka wokol elementu, ktora sie pojawia,  gdy element uzyska focus */
 	outline: none;
+	margin-top: 10px;
 }
 
 input[type=text]:focus,
@@ -50,7 +51,7 @@ input[type=submit] {
 	font-size: 20px;
 	color: white;
 	padding: 15px 10px; 				/* y x */
-	margin-top: 10px;
+	margin-top: 20px;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -66,4 +67,40 @@ input[type=submit]:focus {
 
 input[type=submit]:hover {
 	background-color: #37b93d;
+}
+
+/* kolory placholderow : */
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+input:focus::-webkit-input-placeholder {
+	color: #428c42;
+}
+
+/* FireFox < 19 */
+input:-moz-placeholder {
+	color: #999;
+}
+
+input:focus:-moz-placeholder {
+	color: #428c42;
+}
+
+/* FireFox > 19 */
+input::-moz-placeholder {
+	color: #999;
+}
+
+input:focus::-moz-placeholder {
+	color: #428c42;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+	color: #999;
+}
+
+input:focus:-ms-input-placeholder {
+	color: #428c42;
 }
