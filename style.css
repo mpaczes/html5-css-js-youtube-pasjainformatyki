@@ -30,6 +30,18 @@ input[type=password] {
 	/* dla pol tekstowych przegladarka ustawia box-sizing: content-box; , czyli do maksymalnej szerokosci pol dolozona 10px paddingu */
 	/* przycisk uzywa innego sposobu liczenia rozmiaru, tzn. box-sizing: border-box; . */
 	box-sizing: border-box;			/* nakazuje ustawic 300px niezaleznie od szerokosci kontentu */
+	/* outline to inaczej obwodka wokol elementu, ktora sie pojawia,  gdy element uzyska focus */
+	outline: none;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);		/* -webkit to open sourcowy silnik renderowania stron internetowych ktorego uzyto m. in. w Chrome, Safari i Operze */
+	-moz-box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);			/* przedrostek -moz oznacza Mozille Firefoxa */
+	box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);
+	border: 2px solid #a5cda5;
+	background-color: #e9f3e9;
+	color: #428c42;
 }
 
 input[type=submit] {
@@ -43,4 +55,15 @@ input[type=submit] {
 	border-radius: 5px;
 	cursor: pointer;
 	letter-spacing: 2px;
+	outline: none;
+}
+
+input[type=submit]:focus {
+	-webkit-box-shadow: 0px 0px 15px 2px rgba(204,204,204,0.9);		/* -webkit to open sourcowy silnik renderowania stron internetowych ktorego uzyto m. in. w Chrome, Safari i Operze */
+	-moz-box-shadow: 0px 0px 15px 2px rgba(204,204,204,0.9);			/* przedrostek -moz oznacza Mozille Firefoxa */
+	box-shadow: 0px 0px 15px 2px rgba(204,204,204,0.9);
+}
+
+input[type=submit]:hover {
+	background-color: #37b93d;
 }
