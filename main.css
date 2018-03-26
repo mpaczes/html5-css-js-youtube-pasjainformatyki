@@ -83,6 +83,11 @@ h1
 .photo2
 {
 	width: 450px;
+	transition: transform .4s ease-in-out;
+}
+
+.photo2:hover {
+	transform: scale(0.95) rotate(-5deg) skew(2deg, 2deg);				/* kombo, czyli kilka efektow od razu : skala , obrot, skew -- pzrekrzywienie (z prostokata tworzymy rownoleglobok) */
 }
 
 .photo3
