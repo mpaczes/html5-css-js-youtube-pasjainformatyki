@@ -162,9 +162,34 @@ h1
 .photo5
 {
 	width: 450px;
+	height: 278px;
+	overflow: hidden;				/* ukryj fakt przepelnienia div'a, czyli jezeli obrazek nie miesci sie w div'ie, to nie dodawaj paskow pzrewijania i innych rzeczy */
+	/* czyli ten pojemnik ma miec wymiary 450px na 278px bez wzgledu na wszystko */
+}
+
+.photo5 img {
+	transition: all 0.5s ease-in-out;
+}
+
+.photo5:hover img {
+	-webkit-transform: scale(1.15);			/* powiekszenie 115 % */
+	-ms-transform: scale(1.15);			/* powiekszenie 115 % */
+	transform: scale(1.15);			/* powiekszenie 115 % */
 }
 
 .photo6
 {
 	width: 450px;
+	height: 278px;
+	overflow: hidden;
+}
+
+.photo6 img {
+	transition: all 0.7s ease-in-out;
+}
+
+.photo6:hover img {
+	-webkit-transform: scale(1.2) rotate(-5deg);			/* powiekszenie 115 % */
+	-ms-transform: scale(1.2) rotate(-5deg);			/* powiekszenie 115 % */
+	transform: scale(1.2) rotate(-5deg);			/* powiekszenie 115 % */
 }
