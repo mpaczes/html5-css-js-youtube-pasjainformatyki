@@ -76,7 +76,9 @@ h1
 .photo1:hover {
 	/* transformacej wstawiamy do hovera */
 	/*  combo to kilka zmian w ramach jedengo hovera */
-	transform: scale(0.9);				/*  pomniejszamy obrazek */
+	-webkit-transform: scale(0.9);				/*  pomniejszamy obrazek */		/* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+	-ms-transform: scale(0.9);				/*  pomniejszamy obrazek */		/* IE 9 */
+	transform: scale(0.9);				/*  pomniejszamy obrazek */		/* IE 10, Fx 16+, Op 12.1+ */
 	opacity: 0.6;
 }
 
@@ -87,7 +89,9 @@ h1
 }
 
 .photo2:hover {
-	transform: scale(0.95) rotate(-5deg) skew(2deg, 2deg);				/* kombo, czyli kilka efektow od razu : skala , obrot, skew -- pzrekrzywienie (z prostokata tworzymy rownoleglobok) */
+	-webkit-transform: scale(0.95) rotate(-5deg) skew(2deg, 2deg);				/* kombo, czyli kilka efektow od razu : skala , obrot, skew -- pzrekrzywienie (z prostokata tworzymy rownoleglobok) */		/* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+	-ms-transform: scale(0.95) rotate(-5deg) skew(2deg, 2deg);		/* IE 9 */
+	transform: scale(0.95) rotate(-5deg) skew(2deg, 2deg);		/* IE 10, Fx 16+, Op 12.1+ */
 }
 
 .photo3
