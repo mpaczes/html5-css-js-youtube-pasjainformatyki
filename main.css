@@ -67,8 +67,18 @@ h1
 .photo1
 {
 	width: 450px;
+	/*  transition to plynne przejscie pomiedzy przeksztalceniami */
+	/*  transition: [jaka wlasciwosc animujemy] [czas przejscia] [rodzaj przejscia];  */
+	/* transition wpisujemy do elementu sprzed transformacji, czyli bez hovera */
+	transition: all 1s ease-in-out;			/* all oznacza wszyskie wlasciowsci, czyli transform i opacity w tym przypadku */
 }
 
+.photo1:hover {
+	/* transformacej wstawiamy do hovera */
+	/*  combo to kilka zmian w ramach jedengo hovera */
+	transform: scale(0.9);				/*  pomniejszamy obrazek */
+	opacity: 0.6;
+}
 
 .photo2
 {
