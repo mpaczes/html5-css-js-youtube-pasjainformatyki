@@ -1,4 +1,10 @@
 
+// zmienne globalne :
+var oneVisible = false;
+var turnCounter = 0;
+var visible_nr;
+var lock = false;
+var pairsLeft = 6;
 var cards = ["ciri.png", "geralt.png", "jaskier.png", "jaskier.png", "iorweth.png", "triss.png", "geralt.png", "yen.png", "ciri.png", "triss.png", "yen.png", "iorweth.png"];
 
 // console.log(cards);
@@ -50,13 +56,6 @@ $("#c10").on("click", function() {
 $("#c11").on("click", function() {
 	revealCard(11);
 });
-
-// zmienne globalne :
-var oneVisible = false;
-var turnCounter = 0;
-var visible_nr;
-var lock = false;
-var pairsLeft = 6;
 
 // funkcja odslon karte
 /*
