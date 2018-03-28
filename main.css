@@ -12,7 +12,50 @@ a:visited { color: #209781; }
 a:active  { color: #209781; }
 a:hover   { color: #E9B64A; }
 
+h1 {
+	font-szie: 64px;
+	font-weight: 400;
+	text-align: center;
+	letter-spacing: 5px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
 
+p {
+	text-align: center;
+	margin-top: 5px;
+	marign-bottom: 25px;
+	letter-spacing: 2px;
+}
 
+.board {
+	width: 600px;
+	/* wysokosc dla div'a sama sie potem ustawi w przegladarce, wiec tutaj nie trzeba jej ustawiac */
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;				/* calosc wysrodkowana wzgledem napisow w head'erze */
+}
 
+.card {
+	width: 125px;
+	height: 125px;
+	/* kafelki sa div'ami, wiec domyslnie beda sie ustawiac jeden pod drugim, dlatego musimy to zmienic */
+	display: inline-block;
+	margin: 3px;
+	background-image: url("img/karta.png");
+	border: 4px solid #51c8b2;
+	border-radius: 4px;
+	cursor: pointer;
+	filter: brightness(70%);				/* efekt przygasi grafike */
+	transition: all 0.3s ease-in-out;
+}
 
+.card:hover {
+	border: 4px solid #e9b64a;
+	filter: brightness(100%);
+}
+
+.score {
+	margin-top: 5px;
+	letter-spacing: 2px;
+}
