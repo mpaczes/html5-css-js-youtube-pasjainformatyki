@@ -3,6 +3,8 @@ var haslo = "Bez pracy nie ma kołaczy";
 
 var dlugosc = haslo.length;
 
+var ile_skuch = 0;
+
 var haslo1 = "";
 
 for (i = 0; i < dlugosc; i++) {
@@ -92,11 +94,52 @@ String.prototype.ustawZnak = function(miejsce, znak) {
 }
 
 function sprawdz(nr) {
+	var trafiona = false;
+
 	for (i = 0; i < dlugosc; i++) {
 		if (haslo.charAt(i) == litery[nr]) {
 			haslo1 = haslo1.ustawZnak(i, litery[nr]);
+			trafiona = true;
 		}
 	}
 	
-	wypiszHaslo() ;
+	if (trafiona == true) {
+		// kolorujemy na zielono
+		var element = "lit" + nr;
+		
+		document.getElementById(element).style.background = "#003300";
+		document.getElementById(element).style.color = "#00C000";
+		document.getElementById(element).style.border = "3px solid #00C000";
+		document.getElementById(element).style.cursor = "default";
+		
+		wypiszHaslo() ;
+	} else {
+		// kolorujemy na czerwono
+		
+		var element = "lit" + nr;
+		
+		document.getElementById(element).style.background = "#330000";
+		document.getElementById(element).style.color = "#C00000";
+		document.getElementById(element).style.border = "3px solid #C00000";
+		document.getElementById(element).style.cursor = "default";
+		
+		document.getElementById(element).setAttribute("onclick", ";");			// srednik
+		
+		// skucha
+		ile_skuch++;
+		
+		var obraz = "img/s" + ile_skuch + ".jpg";
+		
+		document.getElementById("szubienica").innerHTML = '<img src="' + obraz + '" />';
+	}
+	
+	// wygrana
+	if (haslo == haslo1) {
+		document.getElementById("alfabet").innerHTML = 'Tak jest ! Podano prawidłowe hasło : ' + haslo + '<br /><br /><span class="reset" onclick="location.reload()">Jeszcze raz ?</span>';
+	}
+	
+	// przegrana
+	if (ile_skuch >= 7) {
+		document.getElementById("alfabet").innerHTML = 'Przegrana! Podano nieprawidłowe hasło : ' + haslo + '<br /><br /><span class="reset" onclick="location.reload()">Jeszcze raz ?</span>';
+	}
 }
