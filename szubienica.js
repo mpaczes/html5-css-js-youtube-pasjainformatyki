@@ -71,7 +71,7 @@ function start() {
 	for (i = 0; i < 35; i++) {
 		var element = "lit" + i;
 		// generujemy jednego diva klasy .litera
-		trescDiva = trescDiva + '<div class="litera" id="' + element + '">' + litery[i] + '</div>';
+		trescDiva = trescDiva + '<div class="litera" onclick="sprawdz(' + i + ')" id="' + element + '">' + litery[i] + '</div>';
 		
 		if ((i  + 1) % 7 == 0) {
 			trescDiva = trescDiva + '<div style="clear:both;"></div>';
@@ -81,4 +81,22 @@ function start() {
 	document.getElementById("alfabet").innerHTML = trescDiva;
 	
 	wypiszHaslo();
+}
+
+String.prototype.ustawZnak = function(miejsce, znak) {
+	if (miejsce > this.length - 1) {
+		return this.toString();
+	} else {
+		return this.substr(0, miejsce) + znak + this.substr(miejsce + 1);
+	}
+}
+
+function sprawdz(nr) {
+	for (i = 0; i < dlugosc; i++) {
+		if (haslo.charAt(i) == litery[nr]) {
+			haslo1 = haslo1.ustawZnak(i, litery[nr]);
+		}
+	}
+	
+	wypiszHaslo() ;
 }
